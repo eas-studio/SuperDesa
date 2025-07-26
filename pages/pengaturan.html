@@ -1,0 +1,114 @@
+<!-- pages/pengaturan.html -->
+
+<div class="mb-8">
+    <h1 class="text-3xl font-bold text-gray-800">Pengaturan Aplikasi</h1>
+    <p class="text-gray-500 mt-1">Atur informasi dasar desa dan data penandatangan untuk digunakan di kop surat.</p>
+</div>
+
+<!-- Form Pengaturan -->
+<form id="form-pengaturan" class="space-y-10">
+    <!-- PENAMBAHAN: Bagian Logo Desa -->
+    <div class="bg-white p-8 rounded-lg shadow-md">
+        <h2 class="text-xl font-bold text-gray-800 border-b pb-4 mb-6">
+            <i class="fas fa-image mr-3 text-blue-600"></i>
+            Logo Desa
+        </h2>
+        <div class="flex items-center space-x-6">
+            <div class="w-24 h-24 bg-gray-100 border-2 border-dashed rounded-lg flex items-center justify-center">
+                <img id="logo-preview" src="https://placehold.co/96x96/E2E8F0/4A5568?text=Logo" alt="Pratinjau Logo" class="max-w-full max-h-full object-contain">
+            </div>
+            <div>
+                <label for="logo_upload" class="bg-gray-600 hover:bg-gray-700 text-white font-semibold py-2 px-4 rounded-lg cursor-pointer transition duration-200">
+                    <i class="fas fa-upload mr-2"></i>Pilih Gambar...
+                </label>
+                <input type="file" id="logo_upload" name="logo_upload" class="hidden" accept="image/png">
+                <p class="text-xs text-gray-500 mt-2">Gunakan format .PNG dengan latar belakang transparan.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bagian Data Desa -->
+    <div class="bg-white p-8 rounded-lg shadow-md">
+        <h2 class="text-xl font-bold text-gray-800 border-b pb-4 mb-6">
+            <i class="fas fa-university mr-3 text-blue-600"></i>
+            Data Desa
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+                <label for="nama_desa" class="block text-sm font-medium text-gray-700 mb-1">Nama Desa</label>
+                <input type="text" id="nama_desa" name="nama_desa" class="w-full p-2 rounded-md form-input">
+            </div>
+            <div>
+                <label for="kode_desa" class="block text-sm font-medium text-gray-700 mb-1">Kode Desa</label>
+                <input type="text" id="kode_desa" name="kode_desa" class="w-full p-2 rounded-md form-input">
+            </div>
+            <div>
+                <label for="kecamatan" class="block text-sm font-medium text-gray-700 mb-1">Kecamatan</label>
+                <input type="text" id="kecamatan" name="kecamatan" class="w-full p-2 rounded-md form-input">
+            </div>
+            <div>
+                <label for="kabupaten" class="block text-sm font-medium text-gray-700 mb-1">Kabupaten</label>
+                <input type="text" id="kabupaten" name="kabupaten" class="w-full p-2 rounded-md form-input">
+            </div>
+            <div class="md:col-span-2">
+                <label for="alamat_desa" class="block text-sm font-medium text-gray-700 mb-1">Alamat Kantor Desa</label>
+                <textarea id="alamat_desa" name="alamat_desa" rows="3" class="w-full p-2 rounded-md form-input" placeholder="Contoh: Jl. Raya Desa No. 1, Cigugur"></textarea>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bagian Data Penandatangan Kepala Desa -->
+    <div class="bg-white p-8 rounded-lg shadow-md">
+        <h2 class="text-xl font-bold text-gray-800 border-b pb-4 mb-6">
+            <i class="fas fa-user-tie mr-3 text-blue-600"></i>
+            Data Penandatangan (Kepala Desa)
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+                <label for="nama_kades" class="block text-sm font-medium text-gray-700 mb-1">Nama Kepala Desa</label>
+                <input type="text" id="nama_kades" name="nama_kades" class="w-full p-2 rounded-md form-input">
+            </div>
+            <div>
+                <label for="nip_kades" class="block text-sm font-medium text-gray-700 mb-1">NIP / NIAP</label>
+                <input type="text" id="nip_kades" name="nip_kades" class="w-full p-2 rounded-md form-input">
+            </div>
+        </div>
+    </div>
+
+    <!-- Bagian Data Penandatangan Camat -->
+    <div class="bg-white p-8 rounded-lg shadow-md">
+        <h2 class="text-xl font-bold text-gray-800 border-b pb-4 mb-6">
+            <i class="fas fa-user-shield mr-3 text-blue-600"></i>
+            Data Penandatangan (Camat)
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+                <label for="nama_camat" class="block text-sm font-medium text-gray-700 mb-1">Nama Camat</label>
+                <input type="text" id="nama_camat" name="nama_camat" class="w-full p-2 rounded-md form-input">
+            </div>
+            <div>
+                <label for="status_camat" class="block text-sm font-medium text-gray-700 mb-1">Status Jabatan</label>
+                <select id="status_camat" name="status_camat" class="w-full p-2 rounded-md form-input">
+                    <option value="Definitif">Definitif</option>
+                    <option value="Plt.">Plt. (Pelaksana Tugas)</option>
+                </select>
+            </div>
+            <div>
+                <label for="nip_camat" class="block text-sm font-medium text-gray-700 mb-1">NIP Camat</label>
+                <input type="text" id="nip_camat" name="nip_camat" class="w-full p-2 rounded-md form-input">
+            </div>
+            <div>
+                <label for="pangkat_camat" class="block text-sm font-medium text-gray-700 mb-1">Pangkat / Golongan Ruang</label>
+                <input type="text" id="pangkat_camat" name="pangkat_camat" class="w-full p-2 rounded-md form-input" placeholder="Contoh: Penata Tingkat I / (III/d)">
+            </div>
+        </div>
+    </div>
+
+    <!-- Tombol Simpan -->
+    <div class="bg-white p-6 rounded-lg shadow-md text-right">
+        <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-200">
+            <i class="fas fa-save mr-2"></i>
+            Simpan Pengaturan
+        </button>
+    </div>
+</form>

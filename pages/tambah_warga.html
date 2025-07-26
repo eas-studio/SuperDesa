@@ -1,0 +1,90 @@
+<!-- pages/tambah_warga.html -->
+
+<div class="flex justify-between items-center mb-8">
+    <div>
+        <h1 class="text-3xl font-bold text-gray-800">Tambah Data Warga</h1>
+        <p class="text-gray-500 mt-1">Isi formulir di bawah untuk menambah data warga baru.</p>
+    </div>
+    <div>
+        <a href="#/data_warga" class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded-lg transition duration-200">
+            <i class="fas fa-arrow-left mr-2"></i>Kembali ke Daftar Warga
+        </a>
+    </div>
+</div>
+
+<!-- Form Tambah Warga -->
+<div class="bg-white p-8 rounded-lg shadow-md">
+    <form id="form-tambah-warga" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Kolom 1 -->
+        <div>
+            <label for="nik" class="block text-sm font-medium text-gray-700 mb-1">NIK</label>
+            <input type="text" id="nik" name="nik" class="w-full p-2 rounded-md form-input" required>
+            <label for="nomor_kk" class="block text-sm font-medium text-gray-700 mt-4 mb-1">Nomor KK</label>
+            <input type="text" id="nomor_kk" name="nomor_kk" class="w-full p-2 rounded-md form-input" required>
+            <label for="nama" class="block text-sm font-medium text-gray-700 mt-4 mb-1">Nama Lengkap</label>
+            <input type="text" id="nama" name="nama" class="w-full p-2 rounded-md form-input" required>
+            <label for="jenis_kelamin" class="block text-sm font-medium text-gray-700 mt-4 mb-1">Jenis Kelamin</label>
+            <select id="jenis_kelamin" name="jenis_kelamin" class="w-full p-2 rounded-md form-input"><option>Laki-laki</option><option>Perempuan</option></select>
+        </div>
+        <!-- Kolom 2 -->
+        <div>
+            <label for="tempat_lahir" class="block text-sm font-medium text-gray-700 mb-1">Tempat Lahir</label>
+            <input type="text" id="tempat_lahir" name="tempat_lahir" class="w-full p-2 rounded-md form-input">
+            <label for="tanggal_lahir" class="block text-sm font-medium text-gray-700 mt-4 mb-1">Tanggal Lahir</label>
+            <input type="date" id="tanggal_lahir" name="tanggal_lahir" class="w-full p-2 rounded-md form-input">
+            <label for="agama" class="block text-sm font-medium text-gray-700 mt-4 mb-1">Agama</label>
+            <input type="text" id="agama" name="agama" class="w-full p-2 rounded-md form-input">
+            <label for="pendidikan" class="block text-sm font-medium text-gray-700 mt-4 mb-1">Pendidikan Terakhir</label>
+            <input type="text" id="pendidikan" name="pendidikan" class="w-full p-2 rounded-md form-input">
+        </div>
+        <!-- Kolom 3 -->
+        <div>
+            <label for="pekerjaan" class="block text-sm font-medium text-gray-700 mb-1">Pekerjaan</label>
+            <input type="text" id="pekerjaan" name="pekerjaan" class="w-full p-2 rounded-md form-input">
+            <label for="status" class="block text-sm font-medium text-gray-700 mt-4 mb-1">Status Perkawinan</label>
+            <select id="status" name="status" class="w-full p-2 rounded-md form-input"><option>Belum Kawin</option><option>Kawin</option><option>Cerai Hidup</option><option>Cerai Mati</option></select>
+            <label for="nama_ayah" class="block text-sm font-medium text-gray-700 mt-4 mb-1">Nama Ayah</label>
+            <input type="text" id="nama_ayah" name="nama_ayah" class="w-full p-2 rounded-md form-input">
+            <label for="nama_ibu" class="block text-sm font-medium text-gray-700 mt-4 mb-1">Nama Ibu</label>
+            <input type="text" id="nama_ibu" name="nama_ibu" class="w-full p-2 rounded-md form-input">
+        </div>
+        <!-- Alamat -->
+        <div class="md:col-span-2 lg:col-span-3 grid grid-cols-1 md:grid-cols-5 gap-6">
+            <div class="md:col-span-3">
+                <label for="alamat" class="block text-sm font-medium text-gray-700 mb-1">Alamat</label>
+                <input type="text" id="alamat" name="alamat" class="w-full p-2 rounded-md form-input" placeholder="Contoh: Kp. Sejahtera">
+            </div>
+            <div><label for="rt" class="block text-sm font-medium text-gray-700 mb-1">RT</label><input type="text" id="rt" name="rt" class="w-full p-2 rounded-md form-input" placeholder="001"></div>
+            <div><label for="rw" class="block text-sm font-medium text-gray-700 mb-1">RW</label><input type="text" id="rw" name="rw" class="w-full p-2 rounded-md form-input" placeholder="001"></div>
+        </div>
+        <!-- Tombol Aksi -->
+        <div class="md:col-span-2 lg:col-span-3 mt-4 flex justify-end space-x-4">
+            <button type="reset" class="bg-gray-500 hover:bg-gray-600 text-white font-semibold py-2 px-6 rounded-lg">Reset</button>
+            <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg">Simpan Data</button>
+        </div>
+    </form>
+</div>
+
+<!-- Fitur Import & Hapus -->
+<div class="mt-10 bg-white p-8 rounded-lg shadow-md">
+    <h2 class="text-xl font-bold text-gray-800 mb-4">Opsi Lanjutan</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+            <label for="import-csv" class="block text-sm font-medium text-gray-700">Import Data dari CSV</label>
+            <p class="text-xs text-gray-500 mt-1 mb-3">Pastikan urutan kolom di file CSV sudah benar.</p>
+            <div class="flex items-center space-x-2">
+                <input type="file" id="import-csv" accept=".csv" class="w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-indigo-50 file:text-indigo-700 hover:file:bg-indigo-100 cursor-pointer border border-gray-300 rounded-lg"/>
+                <button id="btn-import-csv" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg whitespace-nowrap"><i class="fas fa-upload mr-2"></i>Import</button>
+            </div>
+        </div>
+        <div class="md:text-right md:self-end">
+             <label class="block text-sm font-medium text-gray-700 mb-2">Hapus Seluruh Data Warga</label>
+            <button id="hapus-database" class="bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded-lg"><i class="fas fa-trash-alt mr-2"></i>Hapus Database Warga</button>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Konfirmasi Hapus -->
+<div id="delete-modal" class="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center z-50 hidden">
+    <!-- Konten modal... -->
+</div>

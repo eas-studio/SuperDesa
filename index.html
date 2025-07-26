@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Super Desa</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f3f4f6; }
+        .sidebar { background-color: #0E2F3D; color: #e5e7eb; }
+        .sidebar .menu-link:hover, .sidebar .menu-link.active { background-color: #37517E; color: #ffffff; }
+        .sidebar .menu-link.active { border-right: 4px solid #4f46e5; }
+        .header { background-color: #37517E; }
+        .form-input { border: 1px solid #d1d5db; transition: border-color 0.2s, box-shadow 0.2s; }
+        .form-input:focus { border-color: #37517E; box-shadow: 0 0 0 2px rgba(55, 81, 126, 0.5); outline: none; }
+    </style>
+</head>
+<body class="flex h-screen">
+
+    <aside id="sidebar" class="sidebar w-64 flex-shrink-0 flex-col transition-all duration-300 hidden lg:flex">
+        <div class="h-20 flex items-center justify-center" style="background-color: #37517E;">
+            <a href="#/dashboard" class="text-white text-2xl font-bold tracking-wider">SUPER DESA</a>
+        </div>
+        <nav id="main-nav" class="flex-1 px-4 py-6 space-y-4">
+            <div>
+                <h3 class="px-4 mb-2 text-xs uppercase font-semibold tracking-wider text-gray-400">Menu Utama</h3>
+                <a href="#/dashboard" class="menu-link flex items-center px-4 py-3 rounded-lg" data-route="dashboard">
+                    <i class="fas fa-tachometer-alt w-6 text-center"></i><span class="ml-3">Dashboard</span>
+                </a>
+                <!-- PENAMBAHAN: Link pembuatan surat diaktifkan -->
+                <a href="#/pembuatan_surat" class="menu-link flex items-center px-4 py-3 rounded-lg" data-route="pembuatan_surat">
+                    <i class="fas fa-file-signature w-6 text-center"></i><span class="ml-3">Pembuatan Surat</span>
+                </a>
+                <a href="#/data_warga" class="menu-link flex items-center px-4 py-3 rounded-lg" data-route="data_warga">
+                    <i class="fas fa-users w-6 text-center"></i><span class="ml-3">Data Warga</span>
+                </a>
+                 <a href="#" class="menu-link flex items-center px-4 py-3 rounded-lg" data-route="data_surat">
+                    <i class="fas fa-file-invoice w-6 text-center"></i><span class="ml-3">Data Surat Tercetak</span>
+                </a>
+            </div>
+            <div>
+                <h3 class="px-4 mt-6 mb-2 text-xs uppercase font-semibold tracking-wider text-gray-400">Pengaturan</h3>
+                <a href="#/pengaturan_aplikasi" class="menu-link flex items-center px-4 py-3 rounded-lg" data-route="pengaturan_aplikasi">
+                    <i class="fas fa-cogs w-6 text-center"></i><span class="ml-3">Pengaturan Aplikasi</span>
+                </a>
+                <a href="#/pengaturan_surat" class="menu-link flex items-center px-4 py-3 rounded-lg" data-route="pengaturan_surat">
+                    <i class="fas fa-envelope-open-text w-6 text-center"></i><span class="ml-3">Pengaturan Surat</span>
+                </a>
+                <a href="#" class="menu-link flex items-center px-4 py-3 rounded-lg" data-route="pengaturan_pengguna">
+                    <i class="fas fa-user-cog w-6 text-center"></i><span class="ml-3">Pengaturan Pengguna</span>
+                </a>
+            </div>
+        </nav>
+    </aside>
+
+    <div class="flex-1 flex flex-col">
+        <header class="header h-20 flex items-center justify-between px-6 shadow-md text-white">
+            <button id="menu-toggle" class="lg:hidden"><i class="fas fa-bars text-2xl"></i></button>
+            <h1 id="page-title" class="text-xl font-semibold hidden sm:block">Dashboard</h1>
+            <div class="flex items-center">
+                <span class="mr-4 font-semibold">Admin Desa</span>
+                <img src="https://placehold.co/40x40/E2E8F0/4A5568?text=A" alt="Avatar Pengguna" class="w-10 h-10 rounded-full">
+            </div>
+        </header>
+        <main id="app-content" class="flex-1 p-6 lg:p-10 overflow-y-auto"></main>
+    </div>
+    
+    <script src="assets/js/dexie.min.js"></script>
+    <script src="assets/js/papaparse.min.js"></script>
+    <script src="assets/js/db.js"></script>
+    
+    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/data_warga.js"></script>
+    <script src="assets/js/tambah_warga.js"></script>
+    <script src="assets/js/edit_warga.js"></script>
+    <script src="assets/js/pengaturan.js"></script>
+    <script src="assets/js/pengaturan_surat.js"></script>
+    <!-- PENAMBAHAN: Memuat skrip halaman pembuatan surat -->
+    <script src="assets/js/pembuatan_surat.js"></script>
+    
+    <script src="assets/js/app.js"></script>
+</body>
+</html>

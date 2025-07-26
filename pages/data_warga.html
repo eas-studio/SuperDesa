@@ -1,0 +1,56 @@
+<!-- pages/data_warga.html -->
+
+<div class="flex justify-between items-center mb-8">
+    <div>
+        <h1 class="text-3xl font-bold text-gray-800">Daftar Data Warga</h1>
+        <p class="text-gray-500 mt-1">Cari dan kelola data warga yang terdaftar.</p>
+    </div>
+    <div>
+        <!-- Tombol ini sekarang menggunakan hash untuk navigasi SPA -->
+        <a href="#/tambah_warga" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-200">
+            <i class="fas fa-plus mr-2"></i>Tambah Data Warga
+        </a>
+    </div>
+</div>
+
+<div class="bg-white p-8 rounded-lg shadow-md">
+    <div class="mb-6 relative">
+        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+            <i class="fas fa-search text-gray-400"></i>
+        </div>
+        <input type="text" id="search-input" class="w-full p-3 pl-10 rounded-md form-input" placeholder="Cari berdasarkan NIK atau Nama...">
+    </div>
+    <div class="overflow-x-auto">
+        <table class="w-full text-left">
+            <thead>
+                <tr class="border-b bg-gray-50">
+                    <th class="p-4 text-sm font-semibold text-gray-600">No</th>
+                    <th class="p-4 text-sm font-semibold text-gray-600">NIK</th>
+                    <th class="p-4 text-sm font-semibold text-gray-600">Nama</th>
+                    <th class="p-4 text-sm font-semibold text-gray-600">Alamat</th>
+                    <th class="p-4 text-sm font-semibold text-gray-600 text-center">Aksi</th>
+                </tr>
+            </thead>
+            <tbody id="warga-table-body">
+                <!-- Data akan dimuat oleh JavaScript -->
+            </tbody>
+        </table>
+    </div>
+    <div id="pagination-controls" class="mt-6 flex justify-between items-center"></div>
+</div>
+
+<!-- Modal untuk Melihat Detail Warga -->
+<div id="view-warga-modal" class="fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center z-50 hidden">
+    <div class="bg-white p-8 rounded-lg shadow-2xl max-w-2xl w-full mx-4 transform transition-all" style="max-height: 90vh; overflow-y: auto;">
+        <div class="flex justify-between items-center border-b pb-4 mb-6">
+            <h2 class="text-2xl font-bold text-gray-800"><i class="fas fa-user-circle mr-3 text-blue-600"></i>Detail Data Warga</h2>
+            <button id="close-view-modal" class="text-gray-500 hover:text-gray-800 text-2xl">&times;</button>
+        </div>
+        <div id="modal-content-body" class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 text-gray-700">
+            <!-- Data akan diisi oleh JavaScript di sini -->
+        </div>
+        <div class="mt-8 text-right border-t pt-4">
+            <button id="close-view-modal-footer" class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-6 rounded-lg">Tutup</button>
+        </div>
+    </div>
+</div>

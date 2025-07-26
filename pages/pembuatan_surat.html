@@ -1,0 +1,88 @@
+<!-- pages/pembuatan_surat.html -->
+
+<div class="mb-8">
+    <h1 class="text-3xl font-bold text-gray-800">Pembuatan Surat</h1>
+    <p class="text-gray-500 mt-1">Pilih salah satu jenis surat di bawah ini untuk memulai.</p>
+</div>
+
+<!-- Daftar Pilihan Surat -->
+<div id="daftar-surat" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+    
+    <!-- Surat Keterangan Domisili -->
+    <a href="#/buat_surat/domisili" class="surat-card group block bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+        <div class="flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mb-4"><i class="fas fa-home text-xl text-blue-600"></i></div>
+        <h3 class="text-lg font-bold text-gray-800 mb-2 group-hover:text-blue-600">Surat Keterangan Domisili</h3>
+        <p class="text-sm text-gray-600">Menerangkan alamat tempat tinggal seorang warga.</p>
+    </a>
+
+    <!-- Surat Keterangan Usaha -->
+    <a href="#/buat_surat/sku" class="surat-card group block bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+        <div class="flex items-center justify-center w-12 h-12 bg-green-100 rounded-full mb-4"><i class="fas fa-store text-xl text-green-600"></i></div>
+        <h3 class="text-lg font-bold text-gray-800 mb-2 group-hover:text-green-600">Surat Keterangan Usaha</h3>
+        <p class="text-sm text-gray-600">Menyatakan bahwa seorang warga memiliki suatu usaha.</p>
+    </a>
+
+    <!-- Surat Keterangan Tidak Mampu -->
+    <a href="#/buat_surat/sktm" class="surat-card group block bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+        <div class="flex items-center justify-center w-12 h-12 bg-yellow-100 rounded-full mb-4"><i class="fas fa-heart-broken text-xl text-yellow-600"></i></div>
+        <h3 class="text-lg font-bold text-gray-800 mb-2 group-hover:text-yellow-600">Surat Keterangan Tidak Mampu</h3>
+        <p class="text-sm text-gray-600">Keterangan bagi warga yang tergolong kurang mampu.</p>
+    </a>
+
+    <!-- Surat Keterangan Belum Menikah -->
+    <a href="#/buat_surat/belum_menikah" class="surat-card group block bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+        <div class="flex items-center justify-center w-12 h-12 bg-purple-100 rounded-full mb-4"><i class="fas fa-user-check text-xl text-purple-600"></i></div>
+        <h3 class="text-lg font-bold text-gray-800 mb-2 group-hover:text-purple-600">Surat Keterangan Belum Menikah</h3>
+        <p class="text-sm text-gray-600">Menyatakan status perkawinan seorang warga.</p>
+    </a>
+
+    <!-- Surat Pengantar Nikah (Gabungan) -->
+    <a href="#/buat_surat/nikah_lakilaki" class="surat-card group block bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+        <div class="flex items-center justify-center w-12 h-12 bg-pink-100 rounded-full mb-4"><i class="fas fa-ring text-xl text-pink-600"></i></div>
+        <h3 class="text-lg font-bold text-gray-800 mb-2 group-hover:text-pink-600">Surat Pengantar Nikah</h3>
+        <p class="text-sm text-gray-600">Pengantar untuk mengurus pernikahan (NA).</p>
+    </a>
+
+    <!-- Surat Keterangan Cerai Mati -->
+    <a href="#/buat_surat/cerai_mati" class="surat-card group block bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+        <div class="flex items-center justify-center w-12 h-12 bg-gray-100 rounded-full mb-4"><i class="fas fa-book-dead text-xl text-gray-600"></i></div>
+        <h3 class="text-lg font-bold text-gray-800 mb-2 group-hover:text-gray-600">Surat Keterangan Cerai Mati</h3>
+        <p class="text-sm text-gray-600">Keterangan status janda/duda karena pasangan meninggal.</p>
+    </a>
+
+    <!-- Surat Keterangan Domisili Haji -->
+    <a href="#/buat_surat/domisili_haji" class="surat-card group block bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+        <div class="flex items-center justify-center w-12 h-12 bg-teal-100 rounded-full mb-4"><i class="fas fa-kaaba text-xl text-teal-600"></i></div>
+        <h3 class="text-lg font-bold text-gray-800 mb-2 group-hover:text-teal-600">SK Domisili (Untuk Haji)</h3>
+        <p class="text-sm text-gray-600">Keterangan domisili khusus untuk keperluan ibadah haji.</p>
+    </a>
+
+    <!-- Surat Keterangan Nikah Agama -->
+    <a href="#/buat_surat/nikah_tidak_tercatat" class="surat-card group block bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+        <div class="flex items-center justify-center w-12 h-12 bg-indigo-100 rounded-full mb-4"><i class="fas fa-mosque text-xl text-indigo-600"></i></div>
+        <h3 class="text-lg font-bold text-gray-800 mb-2 group-hover:text-indigo-600">SK Nikah Agama/Tidak Tercatat</h3>
+        <p class="text-sm text-gray-600">Keterangan pernikahan yang belum tercatat di KUA.</p>
+    </a>
+
+    <!-- Surat Keterangan Penghasilan Orang Tua -->
+    <a href="#/buat_surat/penghasilan_ortu" class="surat-card group block bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+        <div class="flex items-center justify-center w-12 h-12 bg-orange-100 rounded-full mb-4"><i class="fas fa-money-bill-wave text-xl text-orange-600"></i></div>
+        <h3 class="text-lg font-bold text-gray-800 mb-2 group-hover:text-orange-600">SK Penghasilan Orang Tua</h3>
+        <p class="text-sm text-gray-600">Menyatakan jumlah penghasilan orang tua dari seorang warga.</p>
+    </a>
+
+    <!-- Surat Keterangan Usaha Bank (BRI) -->
+    <a href="#/buat_surat/sku_bri" class="surat-card group block bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+        <div class="flex items-center justify-center w-12 h-12 bg-cyan-100 rounded-full mb-4"><i class="fas fa-landmark text-xl text-cyan-600"></i></div>
+        <h3 class="text-lg font-bold text-gray-800 mb-2 group-hover:text-cyan-600">SK Usaha (Bank BRI)</h3>
+        <p class="text-sm text-gray-600">Format SKU khusus untuk keperluan pinjaman Bank BRI.</p>
+    </a>
+
+    <!-- Surat Keterangan Usaha Bank (Mandiri) -->
+    <a href="#/buat_surat/sku_mandiri" class="surat-card group block bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+        <div class="flex items-center justify-center w-12 h-12 bg-red-100 rounded-full mb-4"><i class="fas fa-university text-xl text-red-600"></i></div>
+        <h3 class="text-lg font-bold text-gray-800 mb-2 group-hover:text-red-600">SK Usaha (Bank Mandiri)</h3>
+        <p class="text-sm text-gray-600">Format SKU khusus untuk keperluan pinjaman Bank Mandiri.</p>
+    </a>
+
+</div>

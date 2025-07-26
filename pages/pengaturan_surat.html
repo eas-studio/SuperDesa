@@ -1,0 +1,66 @@
+<!-- pages/pengaturan_surat.html -->
+
+<div class="mb-8">
+    <h1 class="text-3xl font-bold text-gray-800">Pengaturan Surat</h1>
+    <p class="text-gray-500 mt-1">Atur format penomoran, jenis huruf, dan tampilan footer untuk semua surat.</p>
+</div>
+
+<!-- Form Pengaturan Surat -->
+<form id="form-pengaturan-surat" class="space-y-10">
+    <!-- Bagian Penomoran Surat -->
+    <div class="bg-white p-8 rounded-lg shadow-md">
+        <h2 class="text-xl font-bold text-gray-800 border-b pb-4 mb-6">
+            <i class="fas fa-list-ol mr-3 text-blue-600"></i>
+            Format Penomoran Surat
+        </h2>
+        <div>
+            <label for="format_nomor_surat" class="block text-sm font-medium text-gray-700 mb-1">Struktur Nomor Surat</label>
+            <input type="text" id="format_nomor_surat" name="format_nomor_surat" class="w-full p-2 rounded-md form-input" placeholder="Contoh: [nomor]/[kode_surat]/[bulan_romawi]/[tahun]">
+            <p class="text-xs text-gray-500 mt-2">
+                Gunakan kode berikut: <br>
+                <code class="bg-gray-200 text-gray-800 px-1 rounded">[nomor]</code> untuk nomor urut surat. <br>
+                <code class="bg-gray-200 text-gray-800 px-1 rounded">[kode_surat]</code> untuk kode unik setiap jenis surat. <br>
+                <code class="bg-gray-200 text-gray-800 px-1 rounded">[bulan_romawi]</code> untuk bulan dalam angka Romawi (I, II, ...). <br>
+                <code class="bg-gray-200 text-gray-800 px-1 rounded">[tahun]</code> untuk tahun saat ini (contoh: 2025).
+            </p>
+        </div>
+    </div>
+
+    <!-- Bagian Tampilan Surat -->
+    <div class="bg-white p-8 rounded-lg shadow-md">
+        <h2 class="text-xl font-bold text-gray-800 border-b pb-4 mb-6">
+            <i class="fas fa-font mr-3 text-blue-600"></i>
+            Tampilan Surat
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+                <label for="font_surat" class="block text-sm font-medium text-gray-700 mb-1">Jenis Huruf (Font) Isi Surat</label>
+                <select id="font_surat" name="font_surat" class="w-full p-2 rounded-md form-input">
+                    <option>Arial</option>
+                    <option>Times New Roman</option>
+                    <option>Cambria</option>
+                    <option>Garamond</option>
+                    <option>Bookman Old Style</option>
+                </select>
+                <p class="text-xs text-gray-500 mt-2">Kop surat akan selalu menggunakan font Arial.</p>
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">Footer Surat</label>
+                <div class="mt-2 bg-gray-50 p-4 rounded-lg">
+                    <label for="tampilkan_footer" class="flex items-center">
+                        <input type="checkbox" id="tampilkan_footer" name="tampilkan_footer" class="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                        <span class="ml-3 text-sm text-gray-800">Tampilkan kode desa di footer</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tombol Simpan -->
+    <div class="bg-white p-6 rounded-lg shadow-md text-right">
+        <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-200">
+            <i class="fas fa-save mr-2"></i>
+            Simpan Pengaturan Surat
+        </button>
+    </div>
+</form>
